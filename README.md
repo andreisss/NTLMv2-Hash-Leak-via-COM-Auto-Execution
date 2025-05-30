@@ -5,3 +5,5 @@ Native auto-execution: Leverage login-time paths Windows trusts by default (Star
 Built-in COM objects: No exotic payloads or deprecated file types needed - just Shell.Application, Scripting.FileSystemObject and MSXML2.XMLHTTP and more COM objects.
 
 Automatic NTLM auth: When your script points at a UNC share, Windows immediately tries to authenticate with NTLMv2.
+
+The NTLM hash using native COM components and built-in Windows auto-execution logic. It is silent, reliable, and does not rely on deprecated or patched filetypes.
