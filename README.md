@@ -13,3 +13,5 @@ The NTLM hash using native COM components and built-in Windows auto-execution lo
 
 https://github.com/user-attachments/assets/f8e956e5-8fa2-4eb6-8642-dd2cfef013ad
 
+
+https://medium.com/@andreabocchetti88/ntlmv2-hash-leak-via-com-auto-execution-543919e577cb
