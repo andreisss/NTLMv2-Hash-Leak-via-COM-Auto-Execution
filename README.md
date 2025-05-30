@@ -8,4 +8,8 @@ Automatic NTLM auth: When your script points at a UNC share, Windows immediately
 
 The NTLM hash using native COM components and built-in Windows auto-execution logic. It is silent, reliable, and does not rely on deprecated or patched filetypes.
 
-![image](https://github.com/user-attachments/assets/c58e11b8-dc86-4e3f-a043-4ddb6e630a5d)
+
+
+
+https://github.com/user-attachments/assets/f8e956e5-8fa2-4eb6-8642-dd2cfef013ad
+
